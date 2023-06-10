@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Binmucker.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://chepenik.github.io/conorchepenik.com/" class="logo" target=_blank>Learn More About The Mucker Himself</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="memes.html">Memes</a></li>
+        <li><a href="#posts">My Posts</a></li>
+        <li><a href="forthekids.html">For The Kids</a></li>
+      </ul>
+      <button class="nav-toggle">&#9776;</button>
+    </nav>
+  </header>
+  
+  <section id="quote" class="apitings">
+    <a href="#" onclick="fetchRandomQuote();">Want A Random Quote?</a>
+  </section>
+  
+  <div class="tankdiv">
+    <img src="images/inmucker.jpg" class="tank" alt="binmucker logo">
+  </div>
+  
+  <section id="hero">
+    <p>Binmucker (noun) - "A parent with an extraordinary talent for turning the most challenging and messy situations into learning opportunities for their children. Often mistaken for a magician, but really just a master of improvisation."</p>
+    <img src="images/sloanonshoulder.jpeg" alt="Daddy & Daughter hanging">
+  </section>
+
+  <section id="cta">
+    <a href="https://chep.creator-spring.com/" target="_blank"><button>Like Bitcoin Sunrise Hoodies?</button></a>
+  </section>
+
+  <section class="substack">
+    <iframe src="https://binmucker.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+  </section>
+
+  <section id="about">
+    <div class="about-content">
+      <img src="images/SloanandDaddy.jpeg" alt="Daddy & Daughter Sleeping" class="about-image">
+      <div class="about-text">
+        <p>I am a writer, mediocre programmer, meme enthusiast, and professional shitposter. I've built this website as practice for learning how to code, and I'm sure my child will appreciate learning about what I've learned from raising her.</p>
+        <p>Whoever you are, anonymous visitor, I'm grateful that you are taking some of your most precious asset, time, and using it to visit my website. It brings me a lot of joy knowing there are others out there working towards self-sovereignty. It's one of the biggest lessons I hope to impart to my own child.</p>
+        <p>As a firm believer in the power of Bitcoin and other tools such as Nostr, I am convinced that they will play a vital role in creating a world of more sovereign individuals.</p>
+        <p>If you find value in my work, please consider supporting me by sending some sats to my address at chep@getalby.com. Additionally, I invite fellow Bitcoin enthusiasts to check out <a href="https://massadoption.net/">MassAdoption</a>, a Boston-based startup focused on connecting Bitcoin enthusiasts through meetups and assisting companies in accepting Bitcoin by developing a web application and providing tech support. You can support our efforts by contributing to our <a href="https://geyser.fund/project/massadoption">Geyser fund</a>.</p>
+        <p>Cheers!</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="posts">
+    <h2>My Posts</h2>
+    <div class="post">
+      <h3>Transcending Self Interest</h3>
+      <p></p>
+      <a href="https://binmucker.substack.com/p/transcending-self-interest" target="_blank">Click Here To Read</a>
+    </div>
+    <div class="post">
+      <h3></h3>
+      <p>I Am Enough And Always Will Be</p>
+      <a href="https://binmucker.substack.com/p/i-am-enough-and-always-will-be" target="_blank">Click Here To Read</a>
+    </div>
+    <div class="post">
+      <h3>The Aggregatoor</h3>
+      <p></p>
+      <a href="https://binmucker.substack.com/p/the-aggregatoor" target="_blank">Click Here To Read</a>
+    </div>
+    <div class="post">
+      <h3>Cloudy Like Substances</h3>
+      <p></p>
+      <a href="https://binmucker.substack.com/p/cloudy-like-substances?sd=pf" target="_blank">Click Here To Read</a>
+    </div>
+    <div class="post">
+      <h3>The Emotions Just Hit You Sometimes</h3>
+      <p></p>
+      <a href="https://binmucker.substack.com/p/the-emotions-just-hit-you-sometimes?sd=pf" target="_blank">Click Here To Read</a>
+    </div>
+    <div class="post">
+      <h3>Wondering What Higher Education Will Look Like In 18 years</h3>
+      <p></p>
+      <a href="https://binmucker.substack.com/p/wondering-what-higher-education-will" target="_blank">Click Here To Read</a>
+    </div>
+    <div class="post">
+      <h3>On Patience</h3>
+      <p></p>
+      <a href="On Patience" target="_blank">Click Here To Read</a>
+    </div>
+    <div class="post">
+      <h3>Dad Blog #1</h3>
+      <p></p>
+      <a href="https://binmucker.substack.com/p/dad-blog-1" target="_blank">Click Here To Read</a>
+    </div>
+  </section>
+
+  <div id="articles"></div>
+
+  <footer>
+    <p>I believe in open sourcing stuff, so if this page inspires you, go use the Binmucker brand however you please. I love helping people learn how to write code, so if you want to create your own website and are struggling with something, reach out to me, and maybe I can help.</p>
+  </footer>
+
+  <script>
+    function fetchRandomQuote() {
+      const xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+
+      xhr.addEventListener('readystatechange', function () {
+        if (this.readyState === this.DONE) {
+          const response = JSON.parse(this.responseText);
+          const quote = response.text;
+          alert(quote);
+        }
+      });
+
+      xhr.open('GET', 'https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=YOUR_API_KEY');
+      xhr.setRequestHeader('X-RapidAPI-Key', '932c705442msh6a8d4fb0d13c377p1fe899jsnae0294b94d7e');
+      xhr.setRequestHeader('X-RapidAPI-Host', 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com');
+
+      xhr.send();
+    }
+  </script>
+  <!-- <script src="app.js"></script> -->
+</body>
+</html>
+
