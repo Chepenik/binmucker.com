@@ -321,18 +321,28 @@ h1, h2, h3 {
   }
   
   @media screen and (max-width: 768px) {
-    nav {
-      display: flex;
-      justify-content: space-between;
+    /* Remove the entire media query section for mobile devices */
+    nav ul {
+      display: flex !important; /* Override the 'display: none' property */
+      position: static !important; /* Remove the absolute positioning */
+      top: auto !important;
+      right: auto !important;
+      flex-direction: row !important; /* Change back to a row layout */
+      background-color: transparent !important; /* Remove the background color */
+      border-radius: 0 !important; /* Remove the border radius */
+      padding: 0 !important; /* Remove the padding */
+      margin: 0 !important; /* Remove the margin */
+    }
+  
+    nav ul li {
+      margin: 0 10px !important; /* Restore the original margin */
     }
   
     .nav-toggle {
-      display: inline-block;
-      cursor: pointer;
-      font-size: 24px;
-      color: #fff;
+      display: none; /* Hide the navigation toggle button */
     }
   }
+  
 }
 
 /* Adjust the layout and font sizes for mobile devices */
@@ -381,5 +391,58 @@ h1, h2, h3 {
 
   .about-text {
     margin-right: 0;
+  }
+}
+
+/* Adjust the layout and font sizes for mobile devices */
+@media only screen and (max-width: 600px) {
+  /* Header */
+  .container {
+    padding: 20px;
+  }
+
+  /* Navigation */
+  nav ul {
+    top: 40px;
+  }
+
+  /* Hero */
+  #hero {
+    height: 60vh;
+  }
+
+  #hero img {
+    max-width: 200px;
+  }
+
+  /* Posts */
+  #posts {
+    padding: 10px;
+  }
+
+  .post {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 10px;
+  }
+
+  /* About */
+  #about {
+    padding: 10px;
+  }
+
+  .about-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .about-text {
+    margin-right: 0;
+    text-align: center;
   }
 }
