@@ -1,21 +1,31 @@
 function fetchRandomQuote() {
-    const xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
+    const quoteLink = document.querySelector("#quote a");
+    quoteLink.disabled = true; // Disable the button
   
-    xhr.addEventListener('readystatechange', function () {
-      if (this.readyState === this.DONE) {
-        const response = JSON.parse(this.responseText);
-        const quote = response.text;
-        alert(quote);
-      }
-    });
+    fetch('https://api.themotivate365.com/stoic-quote')
+      .then(response => response.json())
+      .then(data => {
+        if (data.author && data.quote) {
+          const quote = `${data.quote}\n- ${data.author}`;
+          alert(quote);
+        } else {
+          console.error('Invalid response format:', data);
+        }
   
-    xhr.open('GET', 'https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=YOUR_API_KEY');
-    xhr.setRequestHeader('X-RapidAPI-Key', '932c705442msh6a8d4fb0d13c377p1fe899jsnae0294b94d7e');
-    xhr.setRequestHeader('X-RapidAPI-Host', 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com');
-  
-    xhr.send();
+        quoteLink.disabled = false; // Enable the button after the response is received
+      })
+      .catch(error => {
+        console.error('Error fetching quote:', error);
+        quoteLink.disabled = false; // Enable the button if an error occurs
+      });
   }
+  
+  // Event listener for quote link click
+  const quoteLink = document.querySelector("#quote a");
+  quoteLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    fetchRandomQuote();
+  });
   
   document.addEventListener("DOMContentLoaded", function () {
     const navToggle = document.querySelector(".nav-toggle");
@@ -25,11 +35,4 @@ function fetchRandomQuote() {
       navMenu.classList.toggle("show");
       navToggle.textContent = navMenu.classList.contains("show") ? "Close" : "";
     });
-  
-    const quoteLink = document.querySelector("#quote a");
-    quoteLink.addEventListener("click", function (event) {
-      event.preventDefault();
-      fetchRandomQuote();
-    });
-  });
-  
+  });  
