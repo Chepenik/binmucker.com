@@ -8,7 +8,7 @@
 <body>
   <header>
     <nav>
-      <a href="https://chepenik.github.io/conorchepenik.com/" class="logo" target=_blank>Learn More About The Mucker Himself</a>
+      <a href="https://chepenik.github.io/conorchepenik.com/" class="logo" target="_blank">Who Is The Binucker?</a>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="memes.html">Memes</a></li>
@@ -58,42 +58,35 @@
     <h2>My Posts</h2>
     <div class="post">
       <h3>Transcending Self Interest</h3>
-      <p></p>
       <a href="https://binmucker.substack.com/p/transcending-self-interest" target="_blank">Click Here To Read</a>
     </div>
     <div class="post">
-      <h3></h3>
-      <p>I Am Enough And Always Will Be</p>
+      <h3>I Am Enough And Always Will Be</h3>
+      <p></p>
       <a href="https://binmucker.substack.com/p/i-am-enough-and-always-will-be" target="_blank">Click Here To Read</a>
     </div>
     <div class="post">
       <h3>The Aggregatoor</h3>
-      <p></p>
       <a href="https://binmucker.substack.com/p/the-aggregatoor" target="_blank">Click Here To Read</a>
     </div>
     <div class="post">
       <h3>Cloudy Like Substances</h3>
-      <p></p>
       <a href="https://binmucker.substack.com/p/cloudy-like-substances?sd=pf" target="_blank">Click Here To Read</a>
     </div>
     <div class="post">
       <h3>The Emotions Just Hit You Sometimes</h3>
-      <p></p>
       <a href="https://binmucker.substack.com/p/the-emotions-just-hit-you-sometimes?sd=pf" target="_blank">Click Here To Read</a>
     </div>
     <div class="post">
       <h3>Wondering What Higher Education Will Look Like In 18 years</h3>
-      <p></p>
       <a href="https://binmucker.substack.com/p/wondering-what-higher-education-will" target="_blank">Click Here To Read</a>
     </div>
     <div class="post">
       <h3>On Patience</h3>
-      <p></p>
-      <a href="On Patience" target="_blank">Click Here To Read</a>
+      <a href="https://binmucker.substack.com/p/on-patience" target="_blank">Click Here To Read</a>
     </div>
     <div class="post">
       <h3>Dad Blog #1</h3>
-      <p></p>
       <a href="https://binmucker.substack.com/p/dad-blog-1" target="_blank">Click Here To Read</a>
     </div>
   </section>
@@ -104,26 +97,45 @@
     <p>I believe in open sourcing stuff, so if this page inspires you, go use the Binmucker brand however you please. I love helping people learn how to write code, so if you want to create your own website and are struggling with something, reach out to me, and maybe I can help.</p>
   </footer>
 
-  <script>
-    function fetchRandomQuote() {
-      const xhr = new XMLHttpRequest();
-      xhr.withCredentials = true;
-
-      xhr.addEventListener('readystatechange', function () {
-        if (this.readyState === this.DONE) {
-          const response = JSON.parse(this.responseText);
-          const quote = response.text;
-          alert(quote);
-        }
-      });
-
-      xhr.open('GET', 'https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=YOUR_API_KEY');
-      xhr.setRequestHeader('X-RapidAPI-Key', '932c705442msh6a8d4fb0d13c377p1fe899jsnae0294b94d7e');
-      xhr.setRequestHeader('X-RapidAPI-Host', 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com');
-
-      xhr.send();
+  <script src="app.js"></script>
+  <style>
+    /* Additional CSS for the hamburger menu */
+    .nav-toggle {
+      display: none;
     }
-  </script>
-  <!-- <script src="app.js"></script> -->
+    
+    nav ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+        font-size: 1.5rem;
+        background: pink; /* Updated color */
+        border: none;
+        cursor: pointer;
+      }
+    
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+      }
+    
+      nav ul.show {
+        height: auto;
+      }
+    
+      nav ul li {
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
 </body>
 </html>

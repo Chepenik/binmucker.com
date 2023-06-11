@@ -125,6 +125,7 @@ nav ul li a:hover {
   height: 80vh;
   background-color: #8ed1fc;
 }
+
 #hero img {
   max-width: 300px;
   height: auto;
@@ -154,7 +155,6 @@ nav ul li a:hover {
   color: #8ed1fc;
   text-decoration: none;
 }
-
 
 footer {
   background-color: #8ed1fc;
@@ -226,8 +226,8 @@ h1, h2, h3 {
   flex-direction: column;
   text-align: center;
   font-size: 1.5rem;
-  color: #ff8a65; /* South Beach color theme */
-  background-color: #f48fb1; /* South Beach color theme */
+  color: #ff8a65;
+  background-color: #f48fb1;
   padding: 20px;
 }
 
@@ -293,56 +293,6 @@ h1, h2, h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* Navigation menu for mobile devices */
-@media screen and (max-width: 768px) {
-  nav ul {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    flex-direction: column;
-    background-color: #8ed1fc;
-    border-radius: 5px;
-    padding: 10px;
-  }
-
-  nav ul.show-menu {
-    display: flex;
-  }
-
-  nav ul li {
-    margin: 0;
-    margin-bottom: 10px;
-  }
-  .nav-toggle {
-    display: none;
-  }
-  
-  @media screen and (max-width: 768px) {
-    /* Remove the entire media query section for mobile devices */
-    nav ul {
-      display: flex !important; /* Override the 'display: none' property */
-      position: static !important; /* Remove the absolute positioning */
-      top: auto !important;
-      right: auto !important;
-      flex-direction: row !important; /* Change back to a row layout */
-      background-color: transparent !important; /* Remove the background color */
-      border-radius: 0 !important; /* Remove the border radius */
-      padding: 0 !important; /* Remove the padding */
-      margin: 0 !important; /* Remove the margin */
-    }
-  
-    nav ul li {
-      margin: 0 10px !important; /* Restore the original margin */
-    }
-  
-    .nav-toggle {
-      display: none; /* Hide the navigation toggle button */
-    }
-  }
-  
 }
 
 /* Adjust the layout and font sizes for mobile devices */
