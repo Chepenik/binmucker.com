@@ -6,34 +6,288 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For The Kiddos</title>
     <link href="./div.css" rel="stylesheet">
-    <link rel="favicon" href="./favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
+    <style>
+
+html, body{
+        background: linear-gradient(90deg, #FF00CC, #7300ff);
+      }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 250px);
+    grid-template-rows: repeat(4, 250px);
+  }
+
+.grid-item {
+    background-color: #6699cc; /* light blue */
+    transition: all 0.5s ease;
+  }
+  
+.grid-item:hover {
+    background-color: #ffcc99; /* peach */
+    border-radius: 50%;
+    transition: all 0.5s ease;
+  }
+
+.grid-item:hover, .grid-item.active {
+    background-color: #ff8800; /* peach */
+    border-radius: 50%;
+    transform: rotate(360deg) scale(1.2);
+}
+  
+  #div1:hover {
+    background-color: #ff9999; /* pink */
+  }
+  
+  #div2:hover {
+    background-color: #66cc99; /* light green */
+  }
+  
+  #div3:hover {
+    background-color: #9966cc; /* purple */
+  }
+  
+  #div4:hover {
+    background-color: #cc9966; /* light orange */
+  }
+  
+  #div5:hover {
+    background-color: #cc6699; /* light purple */
+  }
+
+  
+#div6:hover {
+    background-color: #00ff7f; /* light green */
+  }
+  
+  #div7:hover {
+    background-color: #ff8000; /* orange */
+  }
+  
+  #div8:hover {
+    background-color: #ffd700; /* yellow */
+  }
+  
+  #div9:hover {
+    background-color: #8000ff; /* purple */
+  }
+  
+  #div10:hover {
+    background-color: #ffa500; /* orange */
+  }
+
+  #div11:hover {
+    background-color: #ffc0cb; /* pink */
+  }
+  
+  #div12:hover {
+    background-color: #8a2be2; /* blue violet */
+  }
+  
+  #div13:hover {
+    background-color: #006400; /* dark green */
+  }
+  
+  #div14:hover {
+    background-color: #800000; /* maroon */
+  }
+  
+  #div15:hover {
+    background-color: #ffa07a; /* light salmon */
+  }
+  
+  #div16:hover {
+    background-color: #008080; /* teal */
+  }
+  
+  #div17:hover {
+    background-color: #2f4f4f; /* dark slate gray */
+  }
+  
+  #div18:hover {
+    background-color: #ff00ff; /* magenta */
+  }
+  
+  #div19:hover {
+    background-color: #9acd32; /* yellow green */
+  }
+  
+  #div20:hover {
+    background-color: #00ffff; /* cyan */
+  }
+  
+  #div21:hover {
+    background-color: #b22222; /* fire brick */
+  }
+
+  #div22:hover {
+    background-color: #4b0082; /* indigo */
+}
+
+#div23:hover {
+    background-color: #f5deb3; /* wheat */
+}
+
+#div24:hover {
+    background-color: #ff69b4; /* hot pink */
+}
+
+#div25:hover {
+  background-color: #ff9999; /* pink */
+}
+
+#div26:hover {
+  background-color: #66cc99; /* light green */
+}
+
+#div27:hover {
+  background-color: #9966cc; /* purple */
+}
+
+#div28:hover {
+  background-color: #cc9966; /* light orange */
+}
+
+#div29:hover {
+  background-color: #cc6699; /* light purple */
+}
+
+#div30:hover {
+  background-color: #00ff7f; /* light green */
+}
+
+#div31:hover {
+  background-color: #ff8000; /* orange */
+}
+
+#div32:hover {
+  background-color: #ffd700; /* yellow */
+}
+
+#div33:hover {
+  background-color: #8000ff; /* purple */
+}
+
+#div34:hover {
+  background-color: #ffa500; /* orange */
+}
+
+#div35:hover {
+  background-color: #ffc0cb; /* pink */
+}
+
+#div36:hover {
+  background-color: #8a2be2; /* blue violet */
+}
+
+#div37:hover {
+  background-color: #006400; /* dark green */
+}
+
+#div38:hover {
+  background-color: #800000; /* maroon */
+}
+
+#div39:hover {
+  background-color: #ffa07a; /* light salmon */
+}
+
+#div40:hover {
+  background-color: #008080; /* teal */
+}
+
+#div41:hover {
+  background-color: #2f4f4f; /* dark slate gray */
+}
+
+#div42:hover {
+  background-color: #ff00ff; /* magenta */
+}
+
+#div43:hover {
+  background-color: #9acd32; /* yellow green */
+}
+
+#div44:hover {
+  background-color: #00ffff; /* cyan */
+}
+
+#div45:hover {
+  background-color: #b22222; /* fire brick */
+}
+
+#div46:hover {
+  background-color: #4b0082; /* indigo */
+}
+
+#div47:hover {
+  background-color: #f5deb3; /* wheat */
+}
+
+#div48:hover {
+  background-color: #ff69b4; /* hot pink */
+}
+
+#div49:hover {
+  background-color: #ff9999; /* pink */
+}
+
+#div50:hover {
+  background-color: #66cc99; /* light green */
+}
+        .grid-item {
+            background-color: #6699cc; /* light blue */
+            transition: all 0.5s ease;
+        }
+
+        .grid-item:hover {
+            background-color: #ff8000; /* peach */
+            border-radius: 50%;
+            transform: rotate(360deg) scale(1.2);
+        }
+    </style>
 </head>
 <body>
     <div class="grid-container">
-        <div class="grid-item" id="div1">Hover Over Us :)</div>
-        <div class="grid-item" id="div2"></div>
-        <div class="grid-item" id="div3"></div>
-        <div class="grid-item" id="div4"></div>
-        <div class="grid-item" id="div5"></div>
-        <div class="grid-item" id="div6"></div>
-        <div class="grid-item" id="div7"></div>    
-        <div class="grid-item" id="div8"></div>
-        <div class="grid-item" id="div9"></div>
-        <div class="grid-item" id="div10"></div>
-        <div class="grid-item" id="div11"></div>
-        <div class="grid-item" id="div12"></div>
-        <div class="grid-item" id="div13"></div>
+        <div class="grid-item" id="div1">*HOVER*</div>
+        <div class="grid-item" id="div2">I</div>
+        <div class="grid-item" id="div3">like</div>
+        <div class="grid-item" id="div4">Bitcoin</div>
+        <div class="grid-item" id="div5">yes</div>
+        <div class="grid-item" id="div6">I</div>
+        <div class="grid-item" id="div7">do</div>
+        <div class="grid-item" id="div8">I</div>
+        <div class="grid-item" id="div9">like</div>
+        <div class="grid-item" id="div10">Bitcoin</div>
+        <div class="grid-item" id="div11">how</div>
+        <div class="grid-item" id="div12">bout</div>
+        <div class="grid-item" id="div13">you?</div>
         <div class="grid-item" id="div14"></div>
-        <div class="grid-item" id="div15"></div>
-        <div class="grid-item" id="div16"></div>
-        <div class="grid-item" id="div17"></div>
-        <div class="grid-item" id="div18"></div>
-        <div class="grid-item" id="div19"></div>
-        <div class="grid-item" id="div20"></div>
-        <div class="grid-item" id="div21"></div>
-        <div class="grid-item" id="div22"></div>
-        <div class="grid-item" id="div23"></div>
-        <div class="grid-item" id="div24"></div>
+        <div class="grid-item" id="div15">If</div>
+        <div class="grid-item" id="div16">you</div>
+        <div class="grid-item" id="div17">don't</div>
+        <div class="grid-item" id="div18">like</div>
+        <div class="grid-item" id="div19">Bitcoin</div>
+        <div class="grid-item" id="div20">well</div>
+        <div class="grid-item" id="div21">then</div>
+        <div class="grid-item" id="div22">shame</div>
+        <div class="grid-item" id="div23">on</div>
+        <div class="grid-item" id="div24">you</div>
       </div>
+
+      <script>
+        var gridItems = document.getElementsByClassName("grid-item");
+
+        for (var i = 0; i < gridItems.length; i++) {
+            gridItems[i].addEventListener("click", function () {
+                var gridItem = this;
+                gridItem.classList.add("active");
+                setTimeout(function () {
+                    gridItem.classList.remove("active");
+                }, 1000); // Change the delay value (in milliseconds) as needed
+            });
+        }
+    </script>
 </body>
 </html>
