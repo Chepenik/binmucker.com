@@ -38,7 +38,7 @@
   </section>
 
   <section id="cta">
-    <a href="https://chep.creator-spring.com/" target="_blank"><button>Like Bitcoin Sunrise Hoodies?</button></a>
+    <a href="https://chep.creator-spring.com/" target="_blank"><button class="roundingbut">Like Bitcoin Sunrise Hoodies?</button></a>
   </section>
 
   <section class="substack">
@@ -104,43 +104,44 @@
   
   <script src="app.js"></script>
   <style>
-    /* Additional CSS for the hamburger menu */
-    .nav-toggle {
-      display: none;
-    }
-    
-    nav ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    @media (max-width: 768px) {
-      .nav-toggle {
-        display: block;
-        font-size: 1.5rem;
-        background: pink; /* Updated color */
-        border: none;
-        cursor: pointer;
-      }
-    
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        height: 0;
-        overflow: hidden;
-        transition: height 0.3s ease;
-      }
-    
-      nav ul.show {
-        height: auto;
-      }
-    
-      nav ul li {
-        margin-bottom: 1rem;
-      }
-    }
+   .nav-toggle {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    font-size: 1.5rem;
+    background: pink; /* Updated color */
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem; /* Added padding for better visibility */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    padding: 0; /* Removed padding to match the parent container */
+  }
+
+  nav ul.show {
+    height: auto;
+  }
+
+  nav ul li {
+    margin-bottom: 1rem;
+  }
+}
   </style>
 </body>
 </html>

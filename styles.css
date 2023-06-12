@@ -8,6 +8,7 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  background: linear-gradient(90deg, #FF00CC, #7300ff);
 }
 
 .container {
@@ -179,6 +180,10 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.roundingbut {
+  border-radius: 2.1%;
 }
 
 body {
