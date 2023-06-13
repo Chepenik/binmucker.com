@@ -23,6 +23,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 20px;
+}
 p {
   margin-top: 0;
   margin-bottom: 20px;
@@ -118,23 +124,46 @@ nav ul li a:hover {
   }
 }
 
+.img-fluid{
+justify-content: center;
+margin: 30px;
+}
+
 #hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   height: 80vh;
   background-color: #8ed1fc;
 }
 
-#hero img {
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hero-image img {
   max-width: 300px;
   height: auto;
+  border-radius: 10%
 }
+
+.hrstyling {
+  border: none;
+  border-top: 1px solid #000000;
+  margin-bottom: 20px;
+}
+
+.hero-content {
+  margin: 25px;
+}
+
 
 #hero h1, #hero p {
   color: #fff;
-  text-align: center;
   font-size: 2em;
 }
 
@@ -185,6 +214,8 @@ button {
 
 .roundingbut {
   border-radius: 2.1%;
+  justify-content: center;
+  margin: 20px;
 }
 
 body {
@@ -409,4 +440,54 @@ h1, h2, h3 {
 
 .icon-resize {
   font-size: 69px; /* Adjust the font size as needed */
+}
+
+.post {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px #888;
+  display: flex; /* Add this line to enable flexbox */
+  flex-direction: column; /* Add this line to change the direction to column */
+  align-items: center; /* Add this line to center the items horizontally */
+  text-align: center; /* Add this line to center the text horizontally */
+}
+
+.nav-toggle {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    font-size: 1.5rem;
+    background: pink; /* Updated color */
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem; /* Added padding for better visibility */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    padding: 0; /* Removed padding to match the parent container */
+  }
+
+  nav ul.show {
+    height: auto;
+  }
+
+  nav ul li {
+    margin-bottom: 1rem;
+  }
 }
