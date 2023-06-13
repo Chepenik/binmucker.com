@@ -4,7 +4,7 @@ header {
 
 body {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 2.5em;
   line-height: 1.5;
   margin: 0;
   padding: 0;
@@ -135,6 +135,7 @@ nav ul li a:hover {
 #hero h1, #hero p {
   color: #fff;
   text-align: center;
+  font-size: 2em;
 }
 
 #posts {
@@ -300,22 +301,26 @@ h1, h2, h3 {
   align-items: center;
 }
 
-/* Adjust the layout and font sizes for mobile devices */
 #about {
   background-color: #8ed1fc;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
 }
 
 .about-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .about-image {
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
-  margin-right: 20px;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
   object-fit: cover;
 }
 
@@ -332,16 +337,17 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   #about {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .about-image {
-    width: 100%;
-    height: auto;
-    margin-right: 0;
-    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px; /* Add margin-left to center the image horizontally */
   }
 
   .about-text {
@@ -349,7 +355,6 @@ h1, h2, h3 {
   }
 }
 
-/* Adjust the layout and font sizes for mobile devices */
 @media only screen and (max-width: 600px) {
   /* Header */
   .container {
