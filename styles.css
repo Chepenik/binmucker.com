@@ -23,6 +23,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
+.section1 {
+  margin: 0;
+  padding: 0;
+}
+
+.section2 {
+  margin: 0;
+  padding: 0;
+}
+
 hr {
   border: 0;
   height: 1px;
