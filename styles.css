@@ -406,3 +406,7 @@ h1, h2, h3 {
     text-align: center;
   }
 }
+
+.icon-resize {
+  font-size: 69px; /* Adjust the font size as needed */
+}
