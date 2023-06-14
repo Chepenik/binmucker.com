@@ -158,7 +158,7 @@ margin: 30px;
 .hero-image img {
   max-width: 300px;
   height: auto;
-  border-radius: 10%
+  border-radius: 21%
 }
 
 .hero-content {
@@ -168,7 +168,7 @@ margin: 30px;
 
 #hero h1, #hero p {
   color: #fff;
-  font-size: 2em;
+  font-size: 1.1em;
 }
 
 #posts {
@@ -196,14 +196,6 @@ footer {
   padding: 20px;
   color: #fff;
   text-align: center;
-}
-
-#cta {
-  background-color: #8ed1fc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
 }
 
 button {
@@ -365,10 +357,11 @@ h1, h2, h3 {
 
 #about p {
   margin-bottom: 10px;
+  color: #fff;
 }
 
 #about a {
-  color: #ff0707;
+  color: #ff9500;
   text-decoration: none;
 }
 
@@ -408,6 +401,7 @@ h1, h2, h3 {
 
   #hero img {
     max-width: 200px;
+    height: auto;
   }
 
   /* Posts */
@@ -443,7 +437,7 @@ h1, h2, h3 {
 }
 
 .icon-resize {
-  font-size: 69px; /* Adjust the font size as needed */
+  font-size: 35px; /* Adjust the font size as needed */
 }
 
 .post {
