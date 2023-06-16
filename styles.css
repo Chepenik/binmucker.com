@@ -151,11 +151,11 @@ margin: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .hero-image img {
-  max-width: 300px;
+  max-width: 500px;
   height: auto;
   border-radius: 21%
 }
@@ -164,6 +164,10 @@ margin: 30px;
   margin: 25px;
 }
 
+.few{
+height: 500px;
+width: auto;
+}
 
 #hero h1, #hero p {
   color: #fff;
