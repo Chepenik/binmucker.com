@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChepDaddy DeZiNes</title>
+    <style>
+        html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    background: #fffdff;
+    margin: 0;
+    font-family:'poppins', sans-serif;
+    translate: 0 -10vh;
+		transition: background 0.2s ease-in-out;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: monospace;
+    color: #888;
+    padding: 10px;
+    font-size: 12px;
+    translate: 0 10vh;
+}
+.footer a { color: #888; }
+
+:root {
+    --_size: min(400px, min(84vw, 64vh));
+    --_conic_1: conic-gradient(from 0deg at 50% 50%,  #ff0000 0%, #003cff 7%, #ffffff 14%, #f8faf9 17%, #220eff 18%, #fe0d00 19%, #ffffff 20%, #02259b 21%, #0004ff 22%, #f8faf9 24%, #f8faf9 27%, #ffffff 28%, #f72015 30%, #f72015 32%, #980055 36%, #ffffff 40%, #ffffff 49%, #02259b 57%, #0127fc 64%, #f8faf9 67%, #ffffff 68%, #f72015 69%, #0d0a0d 70%, #02259b 71%, #01c9fc 72%, #f8faf9 74%, #f8faf9 77%, #ffffff 78%, #f72015 80%, #f72015 82%, #980055 86%, #ffffff 90%, #fafafa 98%);
+    --_conic_2: conic-gradient(from 0deg at 50% 50%, #ff9d00 0%, #ffc400 7%, #6200ff 14%, #ffbb00 21%, #9471ac 28%, #30264a 35%, #4e4c81 42%, #8fdbef 49%, #f5f5fb 56%, #7980c6 63%, #2b292e 70%, #a2a199 77%, #f5f2df 84%, #674e60 91%, #130b1a 100%);
+    --_conic_3: conic-gradient(from 0deg at 50% 50%, #00f0ff 0%, #ffa834 1%, #f7fa14 5%, #e8fd81 9%, #fafe98 11%, #fafe98 13%, #ffb128 15%, #fbfa2b 18%, #fbfa2b 24%, #fbfdea 25%, #fbfdea 30%, #fceb1d 31%, #ffa351 33%, #c3c1f1 36%, #c5eeef 40%, #a0e8f5 42%, #9bf7f0 46%, #a1fbd2 49%, #bab3fe 52%, #98f8cd 58%, #abf443 60%, #f5e927 61%, #ff9c52 62%, #fa4cb7 65%, #9145e9 67%, #0173f4 70%, #8daafd 72%, #8febbd 75%, #fa9d9d 77%, #000000 78%, #00ffaa 80%, #68313a 82%, #ffc4a9 87%, #767742 93%, #fffece 100%);
+}
+
+.container,
+.container div{
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0%;
+    top: 0;
+    margin: auto;
+    border-radius: 1000px;
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: var(--_conic_1);
+    transition: transform 1.2s ease-out;
+}
+.container.alt1,
+.container.alt1 div {
+    background-image: var(--_conic_2);
+}
+.container.alt2,
+.container.alt2 div {
+    background-image: var(--_conic_3);
+}
+.container-outlines,
+.container-outlines div{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    border-radius: 1000px;
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+}
+.container-outlines {
+    box-shadow: 
+    3px 3px 5px 1px #1a1a1a81,
+    10px 10px 10px 1px #35353581;
+}
+.container-outlines div{
+    box-shadow: 
+    0 0 2px 1px #bbbbbb81,
+    1px 1px 1px 1px #ffffff90,
+    inset 0 0 3px 0px #0f0f0f;
+}
+.container,
+.container-outlines {
+    width: var(--_size);
+    height: var(--_size);
+}
+
+input[type=range].nestRange {
+    top: calc(var(--_size)/0.65);
+}
+input[type=range] {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: calc(var(--_size)/0.75);
+    margin: auto;
+    width: var(--_size);
+    height: fit-content;
+
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #dddddd22;
+    box-shadow: 
+    0 0 2px 2px #bbb8,
+    inset 0 0 4px 1px #fff8,
+    inset 0 0 5px 5px #bbb8;
+    height: 1rem;
+    border-radius: 20px;
+    overflow: hidden;
+}
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+    background: #dddddd;
+    box-shadow: 
+    0 0 2px 2px #bbb,
+    inset 0 0 4px 1px #fff,
+    inset 0 0 5px 5px #bbb;
+    height: 1rem;
+    border-radius: 20px;
+    overflow: hidden;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 100%;
+    border-radius: 100px;
+    background: var(--_conic_2);
+    scale:1;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 
+    0px 2px 3px 0px #444444,
+    inset 0 0 4px 1px #ffffff;
+}
+input[type=range]::-webkit-slider-thumb:hover {
+    box-shadow: 
+    0px 2px 4px 1px #3f3f3f,
+    inset 0 0 4px 1px #ffffff;
+}
+.options {
+    position: absolute;
+    top: 12vh;
+    left: 2vh;
+    display: flex;
+    width: fit-content;
+    gap: 12px;
+}
+.options > div {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: all 0.2s ease-in-out;
+}
+.options > div:hover {
+    scale: 1.2;
+    opacity: 1;
+}
+.option1 {
+    background-image: var(--_conic_1);
+}
+.option2 {
+    background-image: var(--_conic_2);
+}
+.option3 {
+    background-image: var(--_conic_3);
+}
+
+.toggle-container {
+    position: absolute;
+    top: 12vh;
+    right: 20px;
+	  opacity: 0.3;
+	  transition: opacity 0.2s ease-in-out;
+}
+.toggle-container:hover {
+		opacity: 0.5;
+}
+.toggle {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+.label {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 34px;
+    background-color: #898989;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.label::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+.toggle:checked + .label {
+    background-color: #4F5B66;
+}
+
+.toggle:checked + .label::before {
+    transform: translateX(26px);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    </div>
+    <div class="container-outlines">
+    </div>
+  
+    <input type="range" min="-24" max="24" value="0" class="slider" id="myRange">
+    <input class="nestRange" type="range" min="2" max="12" value="7" class="slider" id="nestRange">
+  
+    <div class="options">
+        <div class="option1"></div>
+        <div class="option2"></div>
+        <div class="option3"></div>
+        <div class="option4"></div> <!-- Miami Vice -->
+        <div class="option5"></div> <!-- Gold and Orange -->
+        <div class="option6"></div> <!-- USA -->
+    </div>
+  
+  <div class="toggle-container">
+      <input type="checkbox" id="toggle" class="toggle"/>
+      <label for="toggle" class="label"></label>
+  </div>
+  
+    <div class="footer">
+    Made by: Chep<br>
+    Designed/Inspired by Artwork from codepen.io
+    </div>
+    <script>
+        const slider = document.getElementById("myRange");
+const slider2 = document.getElementById("nestRange");
+const container = document.querySelector(".container");
+const outlineContainer = document.querySelector(".container-outlines");
+let currentBackground = '';
+
+const clearDivs = (parent) => {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+};
+
+const createNestedDivs = (parent, levels) => {
+  let currentParent = parent;
+  for (let i = 0; i < levels; i++) {
+    const newDiv = document.createElement('div');
+    newDiv.style.width = `calc(${ levels - i} * var(--_size) / ${levels})`; 
+    newDiv.style.height = `calc(${ levels - i} * var(--_size) / ${levels})`;
+    currentParent.appendChild(newDiv);
+    currentParent = newDiv;
+  }
+};
+
+const rotateDivs = () => {
+  const rotatingDivs = container.querySelectorAll("div");
+  let rotation = slider.value;
+  rotatingDivs.forEach((div, index) => {
+    div.style.transform = `rotate(${rotation * (index + 1)}deg)`;
+  });
+};
+
+const updateNestedDivs = () => {
+  const levels = slider2.value;
+  clearDivs(container);
+  clearDivs(outlineContainer);
+  createNestedDivs(container, levels);
+  createNestedDivs(outlineContainer, levels);
+  rotateDivs();
+};
+
+slider.oninput = rotateDivs;
+slider2.oninput = updateNestedDivs;
+
+updateNestedDivs();
+
+let optionElems = document.querySelectorAll('.options div');
+optionElems.forEach((elem, index) => {
+  elem.addEventListener('click', function() {
+      container.className = 'container'; // Reset class
+      if (index === 1) container.classList.add('alt1');
+      if (index === 2) container.classList.add('alt2');
+  });
+});
+
+let toggle = document.getElementById('toggle');
+toggle.addEventListener('change', function() {
+    if (this.checked) {
+        document.body.style.backgroundColor = '#101010';
+    } else {
+        document.body.style.backgroundColor = '#fffdff';
+    }
+});
+
+
+    </script>
+</body>
+</html>
