@@ -11,56 +11,9 @@ body {
   background: linear-gradient(90deg, #FF00CC, #7300ff);
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 40px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.section1 {
-  margin: 0;
-  padding: 0;
-}
-
-.section2 {
-  margin: 0;
-  padding: 0;
-}
-
-hr {
-  border: 0;
-  height: 1px;
-  background-color: #ccc;
-  margin-bottom: 20px;
-}
-p {
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
 a {
   color: #0077cc;
   text-decoration: none;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #0077cc;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #005ea8;
 }
 
 nav {
@@ -76,6 +29,10 @@ nav .logo {
   text-decoration: none;
 }
 
+nav .logo:hover {
+  color: #7300ff;
+}
+
 nav ul {
   display: flex;
   list-style: none;
@@ -84,7 +41,7 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 0 7px;
 }
 
 nav ul li a {
@@ -93,11 +50,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #333;
-}
-
-.nav-toggle {
-  display: none;
+  color: #7300ff;
 }
 
 @media screen and (max-width: 768px) {
@@ -160,8 +113,8 @@ margin: 30px;
   border-radius: 21%
 }
 
-.hero-content {
-  margin: 25px;
+.hero-content p {
+  margin-top: 100px;
 }
 
 .few{
@@ -308,14 +261,9 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
-.apitings:hover {
-  background-color: #EFEFEF;
-  cursor: pointer;
-}
-
 .apitings:hover a {
-  border-color: black;
-  color: black;
+  border-color: #7300ff;
+  color: #7300ff;
 }
 
 .tank {
@@ -330,32 +278,28 @@ h1, h2, h3 {
   justify-content: center;
   align-items: center;
 }
-
 #about {
   background-color: #8ed1fc;
   padding: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: left;
 }
 
-.about-content {
+.about-image {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.about-image {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  margin-bottom: 20px;
-  object-fit: cover;
+.about-image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5%;
 }
 
 .about-text {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 #about p {
@@ -368,23 +312,22 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
   #about {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .about-image {
-    margin-right: 20px;
-    margin-left: 20px; /* Add margin-left to center the image horizontally */
+    margin-bottom: 20px;
   }
 
   .about-text {
-    margin-right: 0;
+    margin-left: 0;
   }
 }
+
 
 @media only screen and (max-width: 600px) {
   /* Header */
@@ -490,5 +433,31 @@ nav ul {
 
   nav ul li {
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .section1 .tankdiv {
+    text-align: center;
+  }
+  .section2 .hero-image {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  #quote {
+    padding-top: 50px; /* Add some top padding to push the content down */
+  }
+
+  #hero {
+    padding-bottom: 20px; /* Add some bottom padding to create space for the button */
+  }
+
+  .hero-content {
+    text-align: center; /* Center the text */
+  }
+
+  .tankdiv {
+    margin-top: 20px; /* Add some top margin to separate the image from the text */
   }
 }
