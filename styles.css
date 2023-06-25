@@ -479,7 +479,7 @@ nav ul {
   inherits: true;
 }
 img {
-  --c: #bec1c9; /* the main coloration of the rotating gradient */
+  --c: #00ff1e; /* the main coloration of the rotating gradient */
   width: 250px; /* the size of the image*/
   aspect-ratio: 1;
   border-radius: 25px;
