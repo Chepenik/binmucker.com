@@ -137,6 +137,16 @@ width: auto;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0px 0px 10px #888;
+  transition: background-color 0.3s, color 0.3s; /* Add transition properties */
+}
+
+.post:hover {
+  background-color: #000;
+}
+
+.post:hover h3,
+.post:hover a {
+  color: #fff;
 }
 
 .post h3 {
