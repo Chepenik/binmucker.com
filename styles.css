@@ -535,3 +535,12 @@ img:hover {
   75%   {transform: var(--_t) rotate3d( 1,-1,0,var(--r))}
   87.5% {transform: var(--_t) rotate3d( 1, 0,0,var(--r))}
 }
+
+.v4v {
+  background-color: #b2d9ff;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
