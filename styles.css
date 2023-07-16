@@ -537,10 +537,68 @@ img:hover {
 }
 
 .v4v {
-  background-color: #b2d9ff;
+  background-color: #000000;
   padding: 5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* Marquee style */
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee .scroll {
+  display: inline-block;
+  animation: animate-marquee 40s linear infinite;
+  animation-delay: -40s;
+}
+
+.marquee .scroll div {
+  display: inline-block;
+  padding-right: 100%;
+}
+
+.category {
+  padding: 0 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600!important;
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 20px;
+  font-family: sans-serif;
+}
+
+/* Responsive marquee */
+@media (max-width: 767px) {
+  .category {
+    font-size: 16px;
+  }
+  .marquee .scroll div {
+    font-size: 16px;
+  }
+}
+
+@keyframes animate-marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }

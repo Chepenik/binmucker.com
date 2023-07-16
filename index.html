@@ -22,6 +22,71 @@
       </ul>
     </nav>
   </header>
+
+  <section class="marquee">
+    <div class="scroll">
+      <div>
+        <h3 class="category">Binmucker.com</h3>
+        <h3 class="category" id="price1"></h3>
+        <h3 class="category" id="block1"></h3>
+        <h3 class="category" id="fees1"></h3>
+        <h3 id="change1" class="category"></h3>
+      </div>
+      <script>
+        const price1 = document.querySelector("#price1");
+        const block1 = document.querySelector("#block1");
+        const fees1 = document.querySelector("#fees1");
+        const change1 = document.querySelector("#change1");
+  
+        function getPrice() {
+          const priceUrl = "https://api.bitaps.com/market/v1/ticker/btcusd";
+  
+          fetch(priceUrl)
+            .then(response => response.json())
+            .then(data => {
+              const lastPrice = data.data.last;
+              price1.textContent = `USD/BTC $${lastPrice}`;
+  
+              if (lastPrice < parseFloat(price1.textContent.replace("USD/BTC $", ""))) {
+                price1.classList.add("red");
+              } else if (lastPrice > parseFloat(price1.textContent.replace("USD/BTC $", ""))) {
+                price1.classList.add("green");
+              } else {
+                price1.classList.remove("red", "green");
+              }
+            });
+        }
+  
+        getPrice();
+  
+        function getBlock() {
+          const blockUrl = "https://chain.api.btc.com/v3/block/latest";
+          console.log(blockUrl);
+  
+          fetch(blockUrl)
+            .then(response => response.json())
+            .then(data => {
+              block1.textContent = `Block Height: ${String(data.data.height)}`; // Convert to string
+            });
+        }
+  
+        getBlock();
+  
+        function getFees() {
+          const feesUrl = "https://mempool.space/api/v1/fees/recommended";
+  
+          fetch(feesUrl)
+            .then(response => response.json())
+            .then(data => {
+              fees1.textContent = `Current Fees: ${data.fastestFee} sat/vb`;
+            });
+        }
+  
+        getFees();
+  
+      </script>
+    </div>
+  </section>  
   
   <section id="quote" class="apitings">
     <div class="col-md-12">
