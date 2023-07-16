@@ -35,4 +35,4 @@ function fetchRandomQuote() {
       navMenu.classList.toggle("show");
       navToggle.textContent = navMenu.classList.contains("show") ? "Close" : "";
     });
-  });  
+  });
