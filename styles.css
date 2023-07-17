@@ -226,8 +226,6 @@ h1, h2, h3 {
   flex-direction: column;
   text-align: center;
   font-size: 1.5rem;
-  color: #ff8a65;
-  background-color: #f48fb1;
   padding: 20px;
 }
 
@@ -255,20 +253,15 @@ h1, h2, h3 {
   margin-bottom: 10px;
 }
 
-.apitings {
-  border: 2px solid #EFEFEF;
-  border-radius: 5px;
-  display: inline-block;
-  text-align: center;
-  padding: 5px;
-  margin: 5px;
-}
+
 
 .apitings a {
   display: inline-block;
   padding: 10px;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 7%;
+  color: rgb(255, 255, 255);
+  background-color: #8ED1fc;
   text-decoration: none;
 }
 
