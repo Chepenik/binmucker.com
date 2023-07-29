@@ -538,6 +538,10 @@ img:hover {
   align-items: center;
 }
 
+.substackheader{
+  text-align: center;
+}
+
 /* Marquee style */
 .red {
   color: red;
