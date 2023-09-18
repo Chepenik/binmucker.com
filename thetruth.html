@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: rgb(176, 176, 176);
+    }
+    
+    .slider-wrapper {
+      --slider-value: 0; 
+    }
+    
+    .slider-container {
+      padding: 3px;
+      position: relative; /* Added position relative */
+    }
+    
+    .slider-track {
+      display: flex;
+      align-items: center;
+      position: relative;
+      border-radius: 50px;
+      height: 4px;
+      width: 150px;
+      background-color: rgb(255, 255, 255);
+    }
+    
+    .slider-track-fill {
+      border-radius: inherit;
+      width: calc(var(--slider-value) * 1%);
+      height: 100%;
+      background-color: red;
+      background: linear-gradient(90deg, #ffe607, #ff0000);
+      filter: brightness(1.2);
+    }
+    
+    .slider-thumb {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: calc(var(--slider-value) / 100 * (100% - 4px) + 4px / 2);
+      transform: translateX(-50%);
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      background-color: rgb(226, 223, 223);
+    }
+
+    .slider-value {
+      position: absolute;
+      left: calc(var(--slider-value) / 100 * (100% - 4px) + 4px + 24px); /* Updated left position */
+      top: -30px;
+      font-size: 14px;
+      color: white;
+      z-index: 1;
+    }
+    
+    .slider-value-box {
+      display: inline-block;
+      padding: 4px 8px;
+      border: 1px solid rgb(47, 0, 100);
+      border-radius: 4px;
+      background-color: white;
+    }
+    
+    .slider-value-static {
+      position: absolute;
+      left: calc(100% + 10px); /* Adjust position as needed */
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: white;
+      z-index: 1;
+    }
+    
+    .slider-input {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 1;
+      width: calc(100% + 20px);
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+    
+    .slider-input::-webkit-slider-runnable-track {
+      height: 100%;
+    }
+    
+    .slider-input::-webkit-slider-thumb {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+    }
+    
+    .slider-input::-moz-range-thumb {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-wrapper">
+    <div class="slider-container">
+      <div class="slider-track">
+        <div class="slider-track-fill"></div>
+        <div class="slider-thumb">
+          <i class="fab fa-bitcoin" style="color: #ff000d;"></i>
+        </div>
+        <input class="slider-input" type="range" min="0" max="100" step="1" value="0">
+      </div>
+      <div id="slider-display" class="slider-value slider-value-static">0 sats</div> <!-- Updated class and added slider-value-static class -->
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  <script>
+    const sliderContainers = document.querySelectorAll('.slider-container');
+    const sliderDisplay = document.getElementById('slider-display');
+
+    sliderContainers.forEach(sliderContainer => {
+      const sliderInput = sliderContainer.querySelector('.slider-input');
+      
+      const updateSlider = () => {
+        const value = +sliderInput.value;
+        const sats = value * 21;
+        sliderContainer.style.setProperty('--slider-value', 100 * value / 100);
+        sliderDisplay.textContent = sats + ' sats';
+      };
+
+      sliderInput.addEventListener('input', updateSlider);
+
+      updateSlider();
+    });
+  </script>
+</body>
+</html>
