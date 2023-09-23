@@ -1,8 +1,8 @@
 var questionArr = [
     {
       question: "What is Bitcoin?",
-      firstOption: "A decentralized digital currency",
-      secondOption: "A centralized digital currency",
+      firstOption: "A peer-to-peer decentralized digital currency",
+      secondOption: "A centralized digital currency relying on central banks",
       thirdOption: "A physical form of currency",
       fourthOption: "A type of stock",
       correctAnswer: "#first-option"
@@ -34,7 +34,7 @@ var questionArr = [
     {
       question: "How are new Bitcoins created?",
       firstOption: "They are printed by the government",
-      secondOption: "They are mined by solving complex mathematical problems",
+      secondOption: "They are mined through a process called hashing, which involves solving complex mathematical problems",
       thirdOption: "They are generated through a centralized banking system",
       fourthOption: "They are exchanged for other cryptocurrencies",
       correctAnswer: "#second-option"
@@ -50,8 +50,8 @@ var questionArr = [
     {
       question: "What is a Bitcoin wallet?",
       firstOption: "A physical wallet to store Bitcoin notes",
-      secondOption: "A software program to store Bitcoin private keys",
-      thirdOption: "A bank account for Bitcoin",
+      secondOption: "Something that serves as a means to store and manage the cryptographic keys required to access and transfer bitcoin",
+      thirdOption: "A network of people who decide on what UTXOs can be added to the ledger.",
       fourthOption: "An online marketplace to buy Bitcoin",
       correctAnswer: "#second-option"
     },
@@ -73,10 +73,10 @@ var questionArr = [
     },
     {
       question: "What is the term for the smallest fraction of a Bitcoin?",
-      firstOption: "Satoshi",
-      secondOption: "Bit",
-      thirdOption: "Coin",
-      fourthOption: "Byte",
+      firstOption: "Satoshis",
+      secondOption: "Bits",
+      thirdOption: "Coins",
+      fourthOption: "Bytes",
       correctAnswer: "#first-option"
     },
     {
@@ -91,14 +91,14 @@ var questionArr = [
       question: "What is a 51% attack in the context of Bitcoin?",
       firstOption: "A cyber attack on Bitcoin exchanges",
       secondOption: "A majority of Bitcoin transactions being fraudulent",
-      thirdOption: "A single entity controlling more than half of the network's mining power",
+      thirdOption: "A single entity controlling more than half of the network's mining power a.k.a hashrate",
       fourthOption: "A government ban on Bitcoin",
       correctAnswer: "#third-option"
     },
     {
       question: "What is the purpose of Bitcoin mining?",
       firstOption: "To burn coal and contribute to global warming",
-      secondOption: "To validate and secure transactions",
+      secondOption: "As new transactions are broadcasted, miners collect them and include them in blocks, which are added to the blockchain.",
       thirdOption: "To manipulate the price of Bitcoin",
       fourthOption: "To support renewable energy initiatives",
       correctAnswer: "#second-option"
@@ -122,9 +122,9 @@ var questionArr = [
     {
       question: "What is the current block reward for successfully mining a Bitcoin block?",
       firstOption: "1 Bitcoin",
-      secondOption: "5 Bitcoins",
+      secondOption: "25 Bitcoins",
       thirdOption: "10 Bitcoins",
-      fourthOption: "25 Bitcoins",
+      fourthOption: "6.25 Bitcoins",
       correctAnswer: "#fourth-option"
     },
     {
@@ -148,21 +148,21 @@ var questionArr = [
       firstOption: "A physical splitting of a Bitcoin into two separate coins",
       secondOption: "A change in the underlying technology of Bitcoin",
       thirdOption: "A software update that introduces new features to Bitcoin",
-      fourthOption: "A divergence in the blockchain resulting in two separate chains",
+      fourthOption: "A divergence of consensus in the blockchain resulting in two separate chains",
       correctAnswer: "#fourth-option"
     },
     {
       question: "What is the Lightning Network?",
-      firstOption: "A decentralized exchange for Bitcoin",
+      firstOption: "A rock band with lightning painted guitars",
       secondOption: "A layer-2 scaling solution for faster and cheaper Bitcoin transactions",
       thirdOption: "A privacy-focused version of Bitcoin",
-      fourthOption: "A peer-to-peer lending platform for Bitcoin",
+      fourthOption: "A peer-to-peer defi platform for leveraging Bitcoin",
       correctAnswer: "#second-option"
     },
     {
       question: "What is the role of a Bitcoin full node?",
-      firstOption: "To mine new Bitcoins",
-      secondOption: "To store the entire history of Bitcoin transactions",
+      firstOption: "A device for spying on your neighbor",
+      secondOption: "To store the entire history of Bitcoin transactions, verify the blockchain, and broadcast transactions",
       thirdOption: "To invalidate Bitcoin transactions",
       fourthOption: "To create new rules for the Bitcoin network",
       correctAnswer: "#second-option"
