@@ -4,312 +4,378 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.ico">
-    <title>ChepDaddy DeZiNes</title>
-    <style>
-        html, body {
-    height: 100%;
-}
-body {
-    display: flex;
-    justify-content: center;
-    background: #fffdff;
-    margin: 0;
-    font-family:'poppins', sans-serif;
-    translate: 0 -10vh;
-		transition: background 0.2s ease-in-out;
-}
-.footer{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-family: monospace;
-    color: #888;
-    padding: 10px;
-    font-size: 12px;
-    translate: 0 10vh;
-}
-.footer a { color: #888; }
-
-:root {
-    --_size: min(400px, min(84vw, 64vh));
-    --_conic_1: conic-gradient(from 0deg at 50% 50%, #ff9d00 0%, #ffc400 7%, #6200ff 14%, #ffbb00 21%, #9471ac 28%, #00ffaa 35%, #d000ff 42%, #8fdbef 49%, #0505ff 56%, #ff9900 63%, #6600ff 70%, #00ff73 77%, #f5f2df 84%, #ff00b7 91%, #8a04ff 100%);
-    --_conic_2: conic-gradient(from 0deg at 50% 50%, #00f0ff 0%, #ffa834 1%, #f7fa14 5%, #e8fd81 9%, #fafe98 11%, #fafe98 13%, #ffb128 15%, #fbfa2b 18%, #fbfa2b 24%, #fbfdea 25%, #fbfdea 30%, #fceb1d 31%, #ffa351 33%, #c3c1f1 36%, #c5eeef 40%, #a0e8f5 42%, #9bf7f0 46%, #6aaf90 49%, #000000 52%, #98f8cd 58%, #abf443 60%, #f5e927 61%, #ff9c52 62%, #fa4cb7 65%, #9145e9 67%, #0173f4 70%, #8daafd 72%, #8febbd 75%, #fa9d9d 77%, #000000 78%, #00ffaa 80%, #68313a 82%, #ffc4a9 87%, #767742 93%, #fffece 100%);
-    --_conic_3: conic-gradient(from 0deg at 50% 50%,  #ffffff 0%, #2c9f8d 7%, #a0a0a0 14%, #00d96d 17%, #000001 18%, #504e4e 19%, #000000 20%, #575757 21%, #202020 22%, #2c3932 24%, #ffffff 27%, #ffffff 28%, #ff0d00 30%, #030303 32%, #000000 36%, #ffffff 40%, #ffffff 49%, #000000 57%, #0eff22 64%, #f8faf9 67%, #ffffff 68%, #000000 69%, #0d0a0d 70%, #010101 71%, #ffffff 72%, #04c765 74%, #f8faf9 77%, #ffffff 78%, #000000 80%, #827d7d 82%, #ff0303 86%, #ffffff 90%, #00209e 98%);
-}
-
-.container,
-.container div{
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0%;
-    top: 0;
-    margin: auto;
-    border-radius: 1000px;
-    background-size: 100% 100%;
-    background-position: 0px 0px;
-    background-image: var(--_conic_1);
-    transition: transform 1.2s ease-out;
-}
-.container.alt1,
-.container.alt1 div {
-    background-image: var(--_conic_2);
-}
-.container.alt2,
-.container.alt2 div {
-    background-image: var(--_conic_3);
-}
-.container-outlines,
-.container-outlines div{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-    border-radius: 1000px;
-    background-size: 100% 100%;
-    background-position: 0px 0px;
-}
-.container-outlines {
-    box-shadow: 
-    3px 3px 5px 1px #1a1a1a81,
-    10px 10px 10px 1px #35353581;
-}
-.container-outlines div{
-    box-shadow: 
-    0 0 2px 1px #bbbbbb81,
-    1px 1px 1px 1px #ffffff90,
-    inset 0 0 3px 0px #0f0f0f;
-}
-.container,
-.container-outlines {
-    width: var(--_size);
-    height: var(--_size);
-}
-
-input[type=range].nestRange {
-    top: calc(var(--_size)/0.65);
-}
-input[type=range] {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: calc(var(--_size)/0.75);
-    margin: auto;
-    width: var(--_size);
-    height: fit-content;
-
-    -webkit-appearance: none;
-    appearance: none;
-    background: transparent;
-    cursor: pointer;
-}
-input[type="range"]::-webkit-slider-runnable-track {
-    background: #dddddd22;
-    box-shadow: 
-    0 0 2px 2px #bbb8,
-    inset 0 0 4px 1px #fff8,
-    inset 0 0 5px 5px #bbb8;
-    height: 1rem;
-    border-radius: 20px;
-    overflow: hidden;
-}
-/******** Firefox ********/
-input[type="range"]::-moz-range-track {
-    background: #dddddd;
-    box-shadow: 
-    0 0 2px 2px #bbb,
-    inset 0 0 4px 1px #fff,
-    inset 0 0 5px 5px #bbb;
-    height: 1rem;
-    border-radius: 20px;
-    overflow: hidden;
-}
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 30px;
-    height: 100%;
-    border-radius: 100px;
-    background: var(--_conic_2);
-    scale:1;
-    transition: all 0.2s ease-in-out;
-    box-shadow: 
-    0px 2px 3px 0px #444444,
-    inset 0 0 4px 1px #ffffff;
-}
-input[type=range]::-webkit-slider-thumb:hover {
-    box-shadow: 
-    0px 2px 4px 1px #3f3f3f,
-    inset 0 0 4px 1px #ffffff;
-}
-.options {
-    position: absolute;
-    top: 12vh;
-    left: 2vh;
-    display: flex;
-    width: fit-content;
-    gap: 12px;
-}
-.options > div {
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    cursor: pointer;
-    opacity: 0.3;
-    transition: all 0.2s ease-in-out;
-}
-.options > div:hover {
-    scale: 1.2;
-    opacity: 1;
-}
-.option1 {
-    background-image: var(--_conic_1);
-}
-.option2 {
-    background-image: var(--_conic_2);
-}
-.option3 {
-    background-image: var(--_conic_3);
-}
-
-.toggle-container {
-    position: absolute;
-    top: 12vh;
-    right: 20px;
-	  opacity: 0.3;
-	  transition: opacity 0.2s ease-in-out;
-}
-.toggle-container:hover {
-		opacity: 0.5;
-}
-.toggle {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-}
-.label {
-    position: relative;
-    display: block;
-    width: 60px;
-    height: 34px;
-    background-color: #898989;
-    border-radius: 34px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.label::before {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 28px;
-    height: 28px;
-    border-radius: 28px;
-    background-color: white;
-    transition: transform 0.3s;
-}
-
-.toggle:checked + .label {
-    background-color: #4F5B66;
-}
-
-.toggle:checked + .label::before {
-    transform: translateX(26px);
-}
-    </style>
 </head>
 <body>
-    <div class="container">
-    </div>
-    <div class="container-outlines">
-    </div>
-  
-    <input type="range" min="-24" max="24" value="0" class="slider" id="myRange">
-    <input class="nestRange" type="range" min="2" max="12" value="7" class="slider" id="nestRange">
-  
-    <div class="options">
-        <div class="option1"></div>
-        <div class="option2"></div>
-        <div class="option3"></div>
-    </div>
-  
-  <div class="toggle-container">
-      <input type="checkbox" id="toggle" class="toggle"/>
-      <label for="toggle" class="label"></label>
-  </div>
-  
-    <div class="footer">
-    Made by: Chep<br>
-    Designed/Inspired by Artwork from codepen.io
-    </div>
-    <script>
-        const slider = document.getElementById("myRange");
-const slider2 = document.getElementById("nestRange");
-const container = document.querySelector(".container");
-const outlineContainer = document.querySelector(".container-outlines");
-let currentBackground = '';
 
-const clearDivs = (parent) => {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
-};
+<script>
 
-const createNestedDivs = (parent, levels) => {
-  let currentParent = parent;
-  for (let i = 0; i < levels; i++) {
-    const newDiv = document.createElement('div');
-    newDiv.style.width = `calc(${ levels - i} * var(--_size) / ${levels})`; 
-    newDiv.style.height = `calc(${ levels - i} * var(--_size) / ${levels})`;
-    currentParent.appendChild(newDiv);
-    currentParent = newDiv;
-  }
-};
+const canvas = document.createElement("canvas")
+const gl = canvas.getContext("webgl2")
 
-const rotateDivs = () => {
-  const rotatingDivs = container.querySelectorAll("div");
-  let rotation = slider.value;
-  rotatingDivs.forEach((div, index) => {
-    div.style.transform = `rotate(${rotation * (index + 1)}deg)`;
-  });
-};
+document.title = "DeZiNes"
+document.body.innerHTML = ""
+document.body.appendChild(canvas) 
+document.body.style = "margin:0;touch-action:none;overflow:hidden;"
+canvas.style.width = "100%"
+canvas.style.height = "auto"
+canvas.style.userSelect = "none"
 
-const updateNestedDivs = () => {
-  const levels = slider2.value;
-  clearDivs(container);
-  clearDivs(outlineContainer);
-  createNestedDivs(container, levels);
-  createNestedDivs(outlineContainer, levels);
-  rotateDivs();
-};
+const dpr = Math.max(1, .5*window.devicePixelRatio)
 
-slider.oninput = rotateDivs;
-slider2.oninput = updateNestedDivs;
+function resize() {
+  const {
+    innerWidth: width, 
+    innerHeight: height
+  } = window
 
-updateNestedDivs();
+  canvas.width = width * dpr
+  canvas.height = height * dpr
 
-let optionElems = document.querySelectorAll('.options div');
-optionElems.forEach((elem, index) => {
-  elem.addEventListener('click', function() {
-      container.className = 'container'; // Reset class
-      if (index === 1) container.classList.add('alt1');
-      if (index === 2) container.classList.add('alt2');
-  });
-});
+  gl.viewport(0, 0, width * dpr, height * dpr)
+}
+window.onresize = resize
 
-let toggle = document.getElementById('toggle');
-toggle.addEventListener('change', function() {
-    if (this.checked) {
-        document.body.style.backgroundColor = '#101010';
-    } else {
-        document.body.style.backgroundColor = '#fffdff';
+const vertexSource = `#version 300 es
+    #ifdef GL_FRAGMENT_PRECISION_HIGH
+    precision highp float;
+    #else 
+    precision mediump float;
+    #endif
+
+    in vec4 position;
+
+    void main(void) {
+        gl_Position = position;
     }
-});
+    `
 
+const fragmentSource = `#version 300 es
+    /*********
+    * made by Matthias Hurrle (@atzedent) 
+    */
+    #ifdef GL_FRAGMENT_PRECISION_HIGH
+    precision highp float;
+    #else
+    precision mediump float;
+    #endif
+
+    out vec4 fragColor;
+
+    uniform vec2 resolution;
+    uniform float time;
+    uniform vec2 touch;
+    uniform int pointerCount;
+
+    #define mouse (touch/resolution)
+    #define P pointerCount
+    #define T time
+    #define S smoothstep
+
+    #define syl(p,s) (length(p)-s)
+
+    mat2 rot(float a) {
+      float c = cos(a),
+      s = sin(a);
+      return mat2(c, -s, s, c);
+    }
+    
+    float smin(float a, float b, float k) {
+      float h = clamp(
+        .5+.5*(b-a)/k,
+        .0,
+        1.
+      );
+      return mix(b,a,h)-k*h*(1.-h);
+    }
+    
+    vec2 smax(vec2 a, vec2 b, float k) {
+      a.x = smin(a.x, -b.x, k);
+      
+      return a;
+    }
+    
+    float rnd(vec2 p) {
+      return fract(sin(dot(p.xy,p.yx+vec2(234, 543)))*345678.);
+    }
+    
+    float rnd(float a) {
+      return fract(sin(a*12.599)*78.233);
+    }
+    
+    float curve(float t) {
+      t /= .5;
+      
+      return mix(
+        rnd(floor(t)),
+        rnd(floor(t)+1.),
+        pow(S(.0, 1., fract(t)), 4.)
+      );
+    }
+    
+    float box(vec3 p, vec3 s, float r) {
+      p = abs(p) - s;
+      
+      return length(max(p,.0))+
+        min(.0, max(max(p.x,p.y),p.z))-r;
+    }
+    
+    vec2 map(vec3 p) {
+      vec2 flr = vec2(-box((p-.2)-vec3(0,4,0), vec3(10,5,10), .2), 0),
+      sph = vec2(syl(p, 1.), 1),
+      cyl = vec2(-syl(abs(p.xy)-vec2(.25), .18), -1),
+      lgt = vec2(syl(abs(p)-vec3(.25,.25,0), .1), 2),
+      a = smax(sph, -cyl, -.055);
+      a = a.x < flr.x ? a: flr;
+      a = a.x < lgt.x ? a: lgt;
+      
+      return a;
+    }
+    
+    float pattern(vec3 p) {
+      vec2 uv = p.xy;
+      
+      return step(length(abs(uv)-vec2(.25))-.2, .0);
+    }
+    
+    vec3 tiles(vec3 p) {
+      if (p.y > 5. || p.x > 9.9 || p.z > 9.9) return vec3(0);
+      
+      vec2 uv = p.xz;
+      vec3 col = vec3(0);
+      vec2 grid = S(.31,.3,abs(fract(uv)-.5));
+      vec2 cell = floor(uv);
+      
+      col += min(grid.x, grid.y);
+      col *= vec3(rnd(cell), rnd(cell + 12.23), rnd(cell + 78.59));
+      col *= curve(T*4.+rnd(cell)*99.33);
+      
+      return col;
+    }
+    
+    vec3 wallart(vec3 p) {
+      vec3 col = vec3(0);
+      vec2 uv = vec2(0);
+      
+      p.y -= 4.;
+      
+      if (abs(p.x) > 9.8 || abs(p.z) > 9.8) {
+        p.y = abs(p.y) - .75;
+        uv = p.yz;
+        for (float i = .0; i < 4.; i++) {
+          uv.x += sin((i+3.)*T*1.5+uv.y*1.2)*.6;
+          col += abs(.057/uv.x*.65)*1.618;
+        }
+    
+        col *= .3*pow(.6+.6*cos(6.3*(T*.25)+vec3(0,23,21)), vec3(.5));
+      }
+    
+      return col;
+    }
+    
+    vec3 vol(vec3 p, vec3 rd, vec3 ro, float maxd) {
+      const float s = .2;
+      
+      float distort = rnd(p.xz),
+      d = s * distort;
+      
+      vec3 col = vec3(0);
+      vec3 vr = rd * s,
+      vp = ro + vr * distort;
+      
+      for (float i = .0; i < 50.; i++) {
+        if (d > maxd) break;
+        
+        float fadep = 1.-clamp(abs(.5+vp.z*vp.z)*.02, .0, 1.),
+        fadet = 1.-clamp(vp.y*vp.y*vp.y, .0, 1.);
+        
+        col += pattern(vp)*.01 * fadep*fadep;
+        col += tiles(vp)*.02 * fadet*fadet;
+        
+        vp += vr;
+        d += s;
+      }
+    
+      return pow(col*4.2, vec3(4));
+    }
+    
+    vec3 norm(vec3 p) {
+      float h = 1e-3;
+      vec2 k = vec2(-1, 1);
+      
+      return normalize(
+        k.xyy*map(p+k.xyy*h).x+
+        k.yxy*map(p+k.yxy*h).x+
+        k.yyx*map(p+k.yyx*h).x+
+        k.xxx*map(p+k.xxx*h).x
+      );
+    }
+    
+    void cam(inout vec3 p) {
+      if (P > 0) {
+        p.yz *= rot(-mouse.y*3.1415+1.5707);
+        p.xz *= rot(3.1415-mouse.x*6.2832);
+      } else {
+        p.yz *= rot(clamp((sin(T*.05)*.5+.5)*.5-.4,-.2,1.));
+        p.xz *= rot(-T*.2);
+      }
+    }
+    
+    void main(void) {
+      vec2 uv = (
+        gl_FragCoord.xy-.5*resolution
+      )/min(resolution.x, resolution.y);
+      
+      vec3 col = vec3(0),
+      ro = vec3(0, 0, exp(-cos(T * .2)) - 5.),
+      rd = normalize(vec3(uv, 1));
+      
+      cam(ro);
+      cam(rd);
+      
+      vec3 p = ro;
+      
+      const float steps = 400., maxd = 80.;
+      float dd = .0, at = .0, e = 1., bnz = .0;
+      
+      for (float i = .0; i < steps; i++) {
+        vec2 d = map(p);
+        
+        if (d.x < 1e-3) {
+          if (bnz++ > 2.) break;
+          
+          int id = int(d.y);
+          vec3 n = norm(p);
+          
+          if (id == 2) {
+            col = vec3(1);
+            break;
+          }
+    
+          col += vol(p, rd, ro, dd);
+          
+          if (id == 0) {
+            col += e * tiles(p);
+            col += e * wallart(p);
+            
+            if (bnz > .0) break;
+          }
+    
+          rd = reflect(rd, n);
+          d.x = 5e-1;
+          e *= .5;
+        }
+    
+        if (dd > maxd) {
+          dd = maxd;
+          break;
+        }
+    
+        dd += d.x;
+        p += rd * d.x;
+        at += .05 * (.05 / dd);
+      }
+    
+      col = pow(col, vec3(.4545));
+      col = S(.0, 1., col);
+      col += at;
+      
+      fragColor = vec4(col, 1);
+    }
+    `
+
+function compile(shader, source) {
+  gl.shaderSource(shader, source)
+  gl.compileShader(shader);
+
+  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+    console.error(gl.getShaderInfoLog(shader))
+  }
+}
+
+let program
+
+function setup() {
+  const vs = gl.createShader(gl.VERTEX_SHADER)
+  const fs = gl.createShader(gl.FRAGMENT_SHADER)
+
+  compile(vs, vertexSource)
+  compile(fs, fragmentSource)
+
+  program = gl.createProgram()
+
+  gl.attachShader(program, vs)
+  gl.attachShader(program, fs)
+  gl.linkProgram(program)
+
+  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+    console.error(gl.getProgramInfoLog(program))
+  }
+}
+
+let vertices, buffer
+
+function init() {
+  vertices = [
+    -1., -1., 1.,
+    -1., -1., 1.,
+    -1., 1., 1.,
+    -1., 1., 1.,
+  ]
+
+  buffer = gl.createBuffer()
+
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW)
+
+  const position = gl.getAttribLocation(program, "position")
+
+  gl.enableVertexAttribArray(position)
+  gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0)
+
+  program.resolution = gl.getUniformLocation(program, "resolution")
+  program.time = gl.getUniformLocation(program, "time")
+  program.touch = gl.getUniformLocation(program, "touch")
+  program.pointerCount = gl.getUniformLocation(program, "pointerCount")
+}
+
+const mouse = {
+  x: 0,
+  y: 0,
+  touches: new Set(),
+  update: function(x, y, pointerId) {
+    this.x = x * dpr;
+    this.y = (innerHeight - y) * dpr;
+    this.touches.add(pointerId)
+  },
+  remove: function(pointerId) { this.touches.delete(pointerId) }
+}
+
+function loop(now) {
+  gl.clearColor(0, 0, 0, 1)
+  gl.clear(gl.COLOR_BUFFER_BIT)
+  gl.useProgram(program)
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
+  gl.uniform2f(program.resolution, canvas.width, canvas.height)
+  gl.uniform1f(program.time, now * 1e-3)
+  gl.uniform2f(program.touch, mouse.x, mouse.y)
+  gl.uniform1i(program.pointerCount, mouse.touches.size)
+  gl.drawArrays(gl.TRIANGLES, 0, vertices.length * .5)
+  requestAnimationFrame(loop)
+}
+
+setup()
+init()
+resize()
+loop(0)
+
+window.addEventListener("pointerdown", e => mouse.update(e.clientX, e.clientY, e.pointerId))
+window.addEventListener("pointerup", e => mouse.remove(e.pointerId))
+window.addEventListener("pointermove", e => {
+  if (mouse.touches.has(e.pointerId))
+    mouse.update(e.clientX, e.clientY, e.pointerId)
+})
+
+</script>
 
     </script>
 </body>

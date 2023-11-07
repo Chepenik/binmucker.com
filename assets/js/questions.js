@@ -121,10 +121,10 @@ var questionArr = [
     },
     {
       question: "What is the current block reward for successfully mining a Bitcoin block?",
-      firstOption: "1 Bitcoin",
-      secondOption: "25 Bitcoins",
-      thirdOption: "10 Bitcoins",
-      fourthOption: "6.25 Bitcoins",
+      firstOption: "1 bitcoin",
+      secondOption: "25 bitcoins",
+      thirdOption: "10 bitcoins",
+      fourthOption: "6.25 bitcoins",
       correctAnswer: "#fourth-option"
     },
     {
