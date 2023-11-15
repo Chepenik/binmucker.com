@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magical Tip Jar</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Papyrus">
+<style>
+  body {
+    font-family: 'Papyrus', fantasy;
+    background: url('images/tipjar.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .heading {
+    font-size: 2.5em;
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .tip-button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s;
+  }
+  #tip-bitcoin {
+    background-color: #FF8C00; /* Orange for Bitcoin */
+  }
+  #tip-bitcoin:hover {
+    background-color: #FFA500;
+  }
+  #tip-fiat {
+    background-color: #008000; /* Green for Fiat */
+  }
+  #tip-fiat:hover {
+    background-color: #00FF00;
+  }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <h1 class="heading">GIVE AND BE CHARMED</h1>
+  <a href="https://nodeless.io/donate/cheps-magic-tip-jar">
+    <button class="tip-button" id="tip-bitcoin">Tip Bitcoin</button>
+  </a>
+  <a href="https://donate.stripe.com/bIY9EfecVft4f846oo">
+    <button class="tip-button" id="tip-fiat">Tip Fiat</button>
+  </a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti"></script>
+<script>
+  function throwConfetti() {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  }
+  document.getElementById('tip-bitcoin').addEventListener('click', throwConfetti);
+  document.getElementById('tip-fiat').addEventListener('click', throwConfetti);
+</script>
+
+</body>
+</html>
